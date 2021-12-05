@@ -1,0 +1,24 @@
+<div id="department">
+    <div class="container">
+        <div class="text-center p-3 mt-5 department_header">
+            <h2>Business Department</h2>
+        </div>
+        <div class="accordion" id="department_accordion">
+            <div class="card" *ngFor="let list of lists">
+                <div class="card-header">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + list.id">
+                            {{list.name}}
+                        </button>
+                    </h2>
+                </div>
+                <div [attr.id]="'collapse' + list.id" [ngClass]="list.id == 1 ? 'collapse show' : 'collapse'">
+                    <div class="card-body">
+                        <p>{{list.description}}</p>
+                        <a routerLink="{{list.link}}">Detail information</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

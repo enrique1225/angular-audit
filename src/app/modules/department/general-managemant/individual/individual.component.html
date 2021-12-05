@@ -1,0 +1,151 @@
+<div class="row mt-5">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card bg-light mb-3">
+            <div class="card-body">
+                <p>Service Company: {{company}}</p>
+                <p>Business Department: {{department}}</p>
+                <p>Business Unit: {{unit}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card bg-light mb-3">
+            <div class="card-body">
+                <p>Type of selected business: {{type}}</p>
+                <p>Template version: {{version}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card bg-light mb-3">
+            <div class="card-body">
+                <p>Started at: {{start_date}}</p>
+                <p>Closed at: {{end_date}}</p>
+                <p>Checker: {{checker_name}}</p>
+                <p>Findings: {{findings}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card bg-light mb-3">
+            <div class="card-header">
+                <p class="title">Drink</p>
+            </div>
+            <div class="card-body">
+                <div id="category-group" class="mb-3">
+                    <ul>
+                        <li *ngFor="let item of drinkDataList">
+                            <label for={{item.category}}>
+                                <input type="checkbox" id={{item.category}} [(ngModel)]="item.isChecked" (change)="changeSelection()">
+                                <span class="label-text">{{item.category}}</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="checkpointer" *ngFor="let item of selectedDrinkList">
+                    <div *ngIf="item.isChecked">
+                        <h6>Checkpoint-Number : {{item.id}}</h6>
+                        <h6 class="checker_category">{{item.category}}</h6>
+                        <p>{{item.description}}</p>
+                        <div class="action">
+                            <button type="button" class="btn btn-success" routerLink="{{item.link}}">Go to divergence</button>
+                            <select class="form-control text-white btn-success font-weight-bold">
+                                <option>Open</option>
+                                <option>Close</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card bg-light mb-3">
+            <div class="card-header">
+                <p class="title">Health food</p>
+            </div>
+            <div class="card-body">
+                <div id="category-group" class="mb-3">
+                    <ul>
+                        <li *ngFor="let item of HealthFoodDataList">
+                            <label for={{item.category}}>
+                                <input type="checkbox" id={{item.category}} [(ngModel)]="item.isChecked" (change)="changeSelection()">
+                                <span class="label-text">{{item.category}}</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="checkpointer" *ngFor="let item of selectedHealthFoodList">
+                    <div *ngIf="item.isChecked">
+                        <h6>Checkpoint-Number : {{item.id}}</h6>
+                        <h6 class="checker_category">{{item.category}}</h6>
+                        <p>{{item.description}}</p>
+                        <div class="action">
+                            <button type="button" class="btn btn-success" routerLink="{{item.link}}">Go to divergence</button>
+                            <select class="form-control text-white btn-success font-weight-bold ">
+                                <option>Open</option>
+                                <option>Close</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card bg-light mb-3">
+            <div class="card-header">
+                <p class="title ">Health food</p>
+            </div>
+            <div class="card-body">
+                <div id="category-group" class="mb-3">
+                    <ul>
+                        <li *ngFor="let item of NutritionFoodDataList">
+                            <label for={{item.category}}>
+                                <input type="checkbox" id={{item.category}} [(ngModel)]="item.isChecked" (change)="changeSelection()">
+                                <span class="label-text">{{item.category}}</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="checkpointer" *ngFor="let item of selectedNutritionFoodList">
+                    <div *ngIf="item.isChecked">
+                        <h6>Checkpoint-Number : {{item.id}}</h6>
+                        <h6 class="checker_category">{{item.category}}</h6>
+                        <p>{{item.description}}</p>
+                        <div class="action">
+                            <button type="button" class="btn btn-success" routerLink="{{item.link}}">Go to divergence</button>
+                            <select class="form-control text-white btn-success font-weight-bold">
+                                <option>Open</option>
+                                <option>Close</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container mt-5 text-center">
+
+    <h3 class="mb-5">Angular Image Crop Example</h3>
+
+    <div class="col-md-12">
+        <input type="file" (change)="onFileChange($event)" />
+    </div>
+
+    <div class="col-md-8">
+        <image-cropper [imageChangedEvent]="imgChangeEvt" [maintainAspectRatio]="true" [aspectRatio]="4 / 4" [resizeToWidth]="256" format="png" (imageCropped)="cropImg($event)" (imageLoaded)="imgLoad()" (cropperReady)="initCropper()" (loadImageFailed)="imgFailed()">
+        </image-cropper>
+    </div>
+
+    <div class="col-md-4">
+        <h6>Image Preview</h6>
+        <img [src]="cropImgPreview" />
+    </div>
+
+</div> -->

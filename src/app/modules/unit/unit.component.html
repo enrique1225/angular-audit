@@ -1,0 +1,28 @@
+<!-- <div class="row mt-5 mb-3">
+    <div class="col-sm-12">
+        <div class="text-right">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".units">Control all units</button>
+        </div>
+    </div>
+</div> -->
+
+<div class="mt-5 text-center px-3">
+    <h2 class="main_title"> Business Units </h2>
+</div>
+
+<div class="row mt-5">
+    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let unit of units">
+        <div class="card bg-light mb-3">
+            <div class="card-header" [attr.data-bs-target]="'#unit' + unit.id" data-bs-toggle="collapse">
+                <p class="title">{{unit.title}}</p>
+            </div>
+            <div [attr.id]="'unit' + unit.id" class="units collapse show">
+                <div class="card-body">
+                    <h6>Department : {{unit.department}}</h6>
+                    <p>{{unit.description}}</p>
+                    <a routerLink="{{unit.link}}">Detail information</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

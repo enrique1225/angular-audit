@@ -1,0 +1,18 @@
+.list-group-item:hover {
+    background-color: #daf0f3;
+}
+
+.list-group-item h5:hover {
+    color: #327b7b;
+    cursor: pointer;
+}
+
+.list-group-item img {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    .list-group-item img {
+        margin-top: 1rem;
+    }
+}

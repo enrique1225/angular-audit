@@ -1,0 +1,27 @@
+.department_header {
+    background: #01AAD5;
+    color: #fff;
+}
+
+.accordion .card-header button {
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0d969a;
+    text-decoration: none;
+}
+
+.accordion .card-header button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.accordion .card-header button:hover {
+    color: #063c3e;
+}
+
+.accordion .collapse a,
+.accordion .collapsed a {
+    color: #0d969a!important;
+    text-decoration: underline!important;
+}

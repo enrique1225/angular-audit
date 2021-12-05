@@ -1,0 +1,27 @@
+<div class="container-fluid pt-5">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 detail_block">
+            <div class="row bg-light mb-3">
+                <div class="col-lg-6 col-md-12 text-center">
+                    <h6>Audit Name: {{auditName}}</h6>
+                    <h6>Auditor: {{auditor}}</h6>
+                </div>
+                <div class="col-lg-6 col-md-12 text-center">
+                    <h6>Started At: {{startedAt}}</h6>
+                    <h6>Closed At: {{closedAt}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-3">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title border-bottom">{{auditName}}</h4>
+                    <ngx-charts-bar-vertical [results]="auditData" [xAxisLabel]="'Months'" [legendTitle]="auditName" [yAxisLabel]="'Audit'" [legend]="true" [showXAxisLabel]="true" [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
+                    </ngx-charts-bar-vertical>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

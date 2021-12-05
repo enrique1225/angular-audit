@@ -1,0 +1,40 @@
+<div class="mt-5 text-center px-3">
+    <h2 class="main_title"> Audit </h2>
+</div>
+
+<div class="col-12 mt-5">
+    <div class="row">
+        <ul class="responsive-table">
+            <li class="table-header">
+                <div class="col col-1">Name</div>
+                <div class="col col-2">Auditor</div>
+                <div class="col col-3">Started At</div>
+                <div class="col col-4">Closed At</div>
+                <div class="col col-5">Status</div>
+                <div class="col col-6">Audit</div>
+            </li>
+            <li class="table-row" *ngFor="let item of items">
+                <div class="col col-1" data-label="Name">
+                    {{item.name}}
+                </div>
+                <div class="col col-2" data-label="Auditor">
+                    {{item.auditor}}
+                </div>
+                <div class="col col-3" data-label="Stated At">
+                    {{item.started_at}}
+                </div>
+                <div class="col col-4" data-label="Closed At">
+                    {{item.closed_at}}
+                </div>
+                <div class="col col-5" data-label="Status">
+                    <button class="btn btn-success btn-sm" *ngIf="item.status == 1">Complete</button>
+                    <button class="btn btn-danger btn-sm" *ngIf="item.status == 0">Incomplete</button>
+                </div>
+                <div class="col col-6">
+                    <i class="fas fa-share audit_link btn-success" *ngIf="item.status == 1" routerLink="audit-detail"></i>
+                    <i class="fas fa-search audit_link btn-danger" *ngIf="item.status == 0" routerLink="audit-detail"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

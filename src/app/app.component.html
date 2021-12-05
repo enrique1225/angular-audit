@@ -1,0 +1,31 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top px-3" style="background: linear-gradient(to right, #4a4ada, #96c93d)">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" routerLink="/home">
+                    <img src="assets/images/logo.png" width="40" height="40" alt="">
+                </a>
+                <!-- <input class="form-control ml-md-5" type="text" placeholder="search.." style="display: inline-block; width: auto;"> -->
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" routerLink="">
+                            <img src="assets/images/profile.jpg" id="profile_img" alt="profile">
+                            <span id="profile_name">Cristina</span>
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </nav>
+</header>
+
+<main class="pb-5 pt-5">
+    <img class="main_background" src="assets/images/login-signup-background-image.jpg">
+
+    <router-outlet></router-outlet>
+</main>

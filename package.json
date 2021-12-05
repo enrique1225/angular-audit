@@ -12,11 +12,6 @@
         "build:ssr": "ng build && ng run business-procedure-checklist-app:server",
         "prerender": "ng run business-procedure-checklist-app:prerender"
     },
-    "author": {
-        "name": "danny",
-        "email": "danny@ganatan.com",
-        "url": "https://www.ganatan.com/"
-    },
     "private": true,
     "dependencies": {
         "@angular/animations": "12.1.0",

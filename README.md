@@ -2,6 +2,12 @@
 This is an audit checkpoints management system.
 
 Frontend: Angular.js 12
+
+Main Packages: 
+ 1. ngx-image-cropper: Image crop, drag and drop  
+ 2. ngx-webcam: Allow Camera Switch DeviceId
+ 3. ngx-charts: Dynamic Chart graph
+
 ![1](https://user-images.githubusercontent.com/95412201/144763875-eb6bf887-73b6-4456-b099-dd5a3223d19c.jpg)
 ![2](https://user-images.githubusercontent.com/95412201/144763878-778c4387-89a7-4a28-b4fe-b26f055841c5.jpg)
 ![3](https://user-images.githubusercontent.com/95412201/144763880-c3d7b54d-8c13-4df7-8db8-928d82e86401.jpg)
